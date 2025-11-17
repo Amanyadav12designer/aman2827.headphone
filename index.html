@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Aman Yadav — UX/UI Designer Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1724;
+    --card:#0b1220;
+    --muted:rgba(255,255,255,0.65);
+    --accent:#8be3ff;
+    --white: #ffffff;
+    --glass: rgba(255,255,255,0.04);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:24px;
+    background: linear-gradient(180deg, #071018 0%, #071217 100%);
+    color:var(--white);
+    font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding-bottom:40px;
+  }
+
+  /* Resume container */
+  .resume {
+    width:100%;
+    max-width:980px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow: 0 20px 60px rgba(2,6,23,0.7);
+    display:grid;
+    grid-template-columns: 320px 1fr;
+    gap:0;
+  }
+
+  /* LEFT column */
+  .left {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:28px 22px;
+    border-right: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .photo {
+    width:100%;
+    height:120px;
+    border-radius:10px;
+    background: linear-gradient(135deg, rgba(139,227,255,0.08), rgba(255,255,255,0.02));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:18px;
+  }
+  .photo .initials {
+    width:72px;height:72px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:22px;background:linear-gradient(90deg,#8be3ff,#7bd1ff);
+    color:#04121a;
+  }
+
+  .contact, .skills, .tools, .education {
+    margin-bottom:20px;
+  }
+  .section-title {
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:1px;
+    margin-bottom:10px;
+    text-transform:uppercase;
+  }
+
+  .contact p {
+    margin:6px 0;
+    font-size:14px;
+    color:var(--muted);
+    line-height:1.35;
+    word-break:break-word;
+  }
+  .contact a { color:var(--white); text-decoration:none; font-weight:600 }
+  .small { font-size:13px; color:var(--muted) }
+
+  /* skill bars */
+  .skill { margin-bottom:10px; }
+  .skill .label { display:flex; justify-content:space-between; font-size:13px; color:var(--muted); margin-bottom:6px; }
+  .bar {
+    height:8px;
+    width:100%;
+    background:rgba(255,255,255,0.06);
+    border-radius:999px;
+    overflow:hidden;
+  }
+  .bar > i {
+    display:block;
+    height:100%;
+    background: linear-gradient(90deg,var(--accent), #5ad2ff);
+    border-radius:999px;
+  }
+
+  .tools-list { display:flex; flex-wrap:wrap; gap:8px; }
+  .chip {
+    padding:8px 10px;
+    background: rgba(255,255,255,0.03);
+    border-radius:8px;
+    font-size:13px;
+    color:var(--white);
+    border:1px solid rgba(255,255,255,0.03);
+  }
+
+  /* RIGHT column */
+  .right {
+    padding:28px 34px;
+  }
+  header.name-row {
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+  }
+  .title {
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:-0.02em;
+    margin-bottom:6px;
+  }
+  .subtitle {
+    font-size:13px;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:700;
+  }
+
+  .summary {
+    margin:18px 0 20px 0;
+    color:var(--muted);
+    line-height:1.6;
+    background: var(--glass);
+    padding:14px 16px;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.02);
+  }
+
+  .section {
+    margin-bottom:18px;
+  }
+
+  h3 {
+    margin:0 0 10px 0;
+    font-size:16px;
+    font-weight:700;
+  }
+
+  .job {
+    margin-bottom:12px;
+  }
+  .job .meta { font-size:13px; color:var(--muted); margin-bottom:8px; }
+  .job ul { margin:0; padding-left:18px; color:var(--muted); list-style:disc; }
+  .job li { margin-bottom:6px; line-height:1.5; }
+
+  .projects .project {
+    margin-bottom:12px;
+  }
+  .project .p-meta { font-weight:600; color:var(--white); margin-bottom:6px; }
+  .project p { margin:0; color:var(--muted); line-height:1.5; font-size:14px; }
+
+  footer {
+    margin-top:18px;
+    color:var(--muted);
+    font-size:13px;
+  }
+
+  /* Responsive */
+  @media (max-width:880px){
+    .resume { grid-template-columns: 1fr; }
+    .left { order:2; border-right:none; border-top:1px solid rgba(255,255,255,0.03) }
+    .right { order:1; }
+    body { margin:12px }
+  }
+
+  /* Print friendly tweaks */
+  @media print {
+    body { background: white; color: black }
+    .resume { box-shadow:none; background: white; color:black; border: none; }
+  }
+</style>
+</head>
+<body>
+
+<main class="resume" role="main" aria-label="Resume of Aman Yadav">
+
+  <!-- LEFT COLUMN -->
+  <aside class="left" role="complementary" aria-label="Contact and skills">
+    <div class="photo" aria-hidden="true">
+      <div class="initials">AY</div>
+    </div>
+
+    <div class="contact">
+      <div class="section-title">Contact</div>
+      <p><strong>Aman Yadav</strong></p>
+      <p class="small">New Delhi, India</p>
+      <p class="small">📞 <a href="tel:+918750429847">+91 87504 29847</a></p>
+      <p class="small">✉️ <a href="mailto:asimyadav857@gmail.com">asimyadav857@gmail.com</a></p>
+      <p class="small">LinkedIn: <a href="https://www.linkedin.com/in/aman-yadav-49b649331" target="_blank" rel="noopener">linkedin.com/in/aman-yadav-49b649331</a></p>
+      <p class="small">Portfolio / Fiverr: <a href="https://www.fiverr.com/s/rEPEX5x" target="_blank" rel="noopener">fiverr.com/s/rEPEX5x</a></p>
+    </div>
+
+    <div class="skills">
+      <div class="section-title">Skills</div>
+
+      <div class="skill">
+        <div class="label"><span>UI Design</span><span>90%</span></div>
+        <div class="bar" aria-hidden="true"><i style="width:90%"></i></div>
+      </div>
+
+      <div class="skill">
+        <div class="label"><span>User Experience Thinking</span><span>82%</span></div>
+        <div class="bar"><i style="width:82%"></i></div>
+      </div>
+
+      <div class="skill">
+        <div class="label"><span>Color System & Typography</span><span>78%</span></div>
+        <div class="bar"><i style="width:78%"></i></div>
+      </div>
+
+      <div class="skill">
+        <div class="label"><span>Accessibility-aware layouts</span><span>70%</span></div>
+        <div class="bar"><i style="width:70%"></i></div>
+      </div>
+
+      <div class="skill">
+        <div class="label"><span>HTML & CSS / Front-end</span><span>80%</span></div>
+        <div class="bar"><i style="width:80%"></i></div>
+      </div>
+    </div>
+
+    <div class="tools">
+      <div class="section-title">Tools & Technologies</div>
+      <div class="tools-list">
+        <div class="chip">Figma</div>
+        <div class="chip">Adobe XD</div>
+        <div class="chip">HTML / CSS</div>
+        <div class="chip">JavaScript (basic)</div>
+        <div class="chip">Responsive Design</div>
+        <div class="chip">Prototyping</div>
+        <div class="chip">GitHub</div>
+        <div class="chip">UI Patterns</div>
+      </div>
+    </div>
+
+    <div class="education">
+      <div class="section-title">Education</div>
+      <p class="small"><strong>Self-taught / Online coursework</strong></p>
+      <p class="small">Courses: UI Design, Responsive Web, Interaction Design, Figma</p>
+    </div>
+
+  </aside>
+
+  <!-- RIGHT COLUMN -->
+  <section class="right" role="region" aria-label="Resume content">
+
+    <header class="name-row" role="heading" aria-level="1">
+      <div>
+        <div class="title">Aman Yadav</div>
+        <div class="subtitle">UX / UI Designer · Front-end HTML & CSS Developer · Web Designer</div>
+      </div>
+      <!-- optional quick stats or availability -->
+      <div class="small" aria-hidden="true">Available for freelance • Remote</div>
+    </header>
+
+    <div class="summary" aria-label="Professional summary">
+      Creative and self-taught UX/UI Designer with strong skills in mobile app design, responsive web design, branding layouts, and front-end HTML/CSS development. I specialize in crafting clean, user-centric interfaces and converting designs into pixel-perfect coded layouts. Passionate about combining creativity with usability to deliver visually refined and intuitive digital experiences.
+    </div>
+
+    <div class="section experience">
+      <h3>Experience</h3>
+
+      <div class="job" aria-label="Intern experience">
+        <div class="meta"><strong>Intern</strong> • Remote — <span class="small">02/2024 — 03/2025</span></div>
+        <ul>
+          <li>Assisted in developing project timelines and deliverables for cross-functional teams.</li>
+          <li>Conducted user research and supported strategic initiatives and decision-making processes.</li>
+          <li>Coordinated meetings, prepared agendas, and communicated design decisions to stakeholders.</li>
+          <li>Built UI screens and interactive prototypes in Figma; converted layouts to responsive HTML/CSS.</li>
+        </ul>
+      </div>
+
+      <!-- Add more experiences as needed -->
+    </div>
+
+    <div class="section projects">
+      <h3>Selected Projects</h3>
+
+      <div class="project">
+        <div class="p-meta">Habit Tracker (Video demo)</div>
+        <p>Interactive habit-tracking app prototype — flows, onboarding, and microinteractions. Demonstrated in a voiceover walkthrough video showing UX decisions and prototype interactions.</p>
+      </div>
+
+      <div class="project">
+        <div class="p-meta">Anything Anywhere — Food Delivery UI</div>
+        <p>Responsive web app screens for restaurant discovery and ordering flow. Focus on hierarchy, spacing, and conversion-driven CTA design.</p>
+      </div>
+
+      <div class="project">
+        <div class="p-meta">Headphone Product Landing</div>
+        <p>Premium e-commerce hero and product detail page mockups — modern visual hierarchy and product-focused layout.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Achievements & Impact</h3>
+      <ul>
+        <li>Created high-fidelity prototypes that improved stakeholder clarity and reduced handoff time to developers.</li>
+        <li>Delivered multiple responsive pages and landing designs with pixel-accurate HTML/CSS implementation.</li>
+      </ul>
+    </div>
+
+    <footer>
+      <div>References and full portfolio available on request — <a href="https://www.fiverr.com/s/rEPEX5x" target="_blank" rel="noopener" style="color:var(--accent)">View portfolio</a></div>
+    </footer>
+
+  </section>
+</main>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
